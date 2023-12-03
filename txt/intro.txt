@@ -1,0 +1,191 @@
+//GAME NAME:		DOLUCKY! FUTEBOL SÉRIE A
+
+// Define required TABLE variables and load the corresponding tables
+#VAR(Table_0, TABLE)
+#ADDTBL("/usr/home/diesel/docs/romhacking/dls/tbl/8x16.tbl", Table_0)
+
+//BLOCK #001 NAME:		Intro
+#ACTIVETBL(Table_0) // Activate this block's starting TABLE
+
+#JMP($DF42F, $DF5F9) // Jump to insertion point
+#HDR($D0000) // Difference between ROM and RAM addresses for pointer value calculations
+
+//POINTER #0 @ $DF3E7 - STRING #0 @ $DF42F
+#W16($DF3E7)
+//     1993ねん     [END]
+// current address: $DF440
+
+//POINTER #1 @ $DF3E9 - STRING #1 @ $DF440
+#W16($DF3E9)
+//とﾞうふﾞつやきうのちょうてんを[END]
+// current address: $DF451
+
+//POINTER #2 @ $DF3EB - STRING #2 @ $DF451
+#W16($DF3EB)
+// きわめたという てﾞんせつの [END]
+// current address: $DF462
+
+//POINTER #3 @ $DF3ED - STRING #3 @ $DF462
+#W16($DF3ED)
+//  とﾞうふﾞつたちかﾞいた。 [END]
+// current address: $DF473
+
+//POINTER #4 @ $DF3EF - STRING #4 @ $DF473
+#W16($DF3EF)
+//                [END]
+// current address: $DF484
+
+//POINTER #5 @ $DF3F1 - STRING #5 @ $DF484
+#W16($DF3F1)
+// ・・・ひとはかれらのことを  [END]
+// current address: $DF495
+
+//POINTER #6 @ $DF3F3 - STRING #6 @ $DF473
+#W16($DF3F3)
+//                [END]
+// current address: $DF484
+
+//POINTER #7 @ $DF3F5 - STRING #7 @ $DF473
+#W16($DF3F5)
+//                [END]
+// current address: $DF484
+
+//POINTER #8 @ $DF3F7 - STRING #8 @ $DF495
+#W16($DF3F7)
+//  "とﾞうふﾞつやきうの   [END]
+// current address: $DF4A6
+
+//POINTER #9 @ $DF3F9 - STRING #9 @ $DF4A6
+#W16($DF3F9)
+//   ちょうてんをきわめた   [END]
+// current address: $DF4B7
+
+//POINTER #10 @ $DF3FB - STRING #10 @ $DF4B7
+#W16($DF3FB)
+// てﾞんせつのとﾞうふﾞつたち"[END]
+// current address: $DF4C8
+
+//POINTER #11 @ $DF3FD - STRING #11 @ $DF4C8
+#W16($DF3FD)
+//     と よんたﾞ。    [END]
+// current address: $DF4D9
+
+//POINTER #12 @ $DF3FF - STRING #12 @ $DF473
+#W16($DF3FF)
+//                [END]
+// current address: $DF484
+
+//POINTER #13 @ $DF401 - STRING #13 @ $DF4D9
+#W16($DF401)
+//   ・・・おっさん そら   [END]
+// current address: $DF4EA
+
+//POINTER #14 @ $DF403 - STRING #14 @ $DF4EA
+#W16($DF403)
+//  そのまんまや ないけ、て。 [END]
+// current address: $DF4FB
+
+//POINTER #15 @ $DF405 - STRING #15 @ $DF473
+#W16($DF405)
+//                [END]
+// current address: $DF484
+
+//POINTER #16 @ $DF407 - STRING #16 @ $DF473
+#W16($DF407)
+//                [END]
+// current address: $DF484
+
+//POINTER #17 @ $DF409 - STRING #17 @ $DF4FB
+#W16($DF409)
+//       さて       [END]
+// current address: $DF50C
+
+//POINTER #18 @ $DF40B - STRING #18 @ $DF473
+#W16($DF40B)
+//                [END]
+// current address: $DF484
+
+//POINTER #19 @ $DF40D - STRING #19 @ $DF473
+#W16($DF40D)
+//                [END]
+// current address: $DF484
+
+//POINTER #20 @ $DF40F - STRING #20 @ $DF50C
+#W16($DF40F)
+//  そんなかれらかﾞつきﾞの  [END]
+// current address: $DF51D
+
+//POINTER #21 @ $DF411 - STRING #21 @ $DF51D
+#W16($DF411)
+// ひょうてきにえらんたﾞのかﾞ [END]
+// current address: $DF52E
+
+//POINTER #22 @ $DF413 - STRING #22 @ $DF52E
+#W16($DF413)
+//   さっかーたﾞった。    [END]
+// current address: $DF53F
+
+//POINTER #23 @ $DF415 - STRING #23 @ $DF473
+#W16($DF415)
+//                [END]
+// current address: $DF484
+
+//POINTER #24 @ $DF417 - STRING #24 @ $DF53F
+#W16($DF417)
+//なんか、いまさっかーフﾞーム  [END]
+// current address: $DF550
+
+//POINTER #25 @ $DF419 - STRING #25 @ $DF550
+#W16($DF419)
+//らしいのてﾞ「Aりーくﾞ」とか [END]
+// current address: $DF561
+
+//POINTER #26 @ $DF41B - STRING #26 @ $DF561
+#W16($DF41B)
+// なのるとかっくいいかな、と  [END]
+// current address: $DF572
+
+//POINTER #27 @ $DF41D - STRING #27 @ $DF572
+#W16($DF41D)
+//  おもったのてﾞそうした。  [END]
+// current address: $DF583
+
+//POINTER #28 @ $DF41F - STRING #28 @ $DF583
+#W16($DF41F)
+// ・・・とﾞうふﾞつたちの   [END]
+// current address: $DF594
+
+//POINTER #29 @ $DF421 - STRING #29 @ $DF594
+#W16($DF421)
+//ほんのうかﾞそうさせたのたﾞ。 [END]
+// current address: $DF5A5
+
+//POINTER #30 @ $DF423 - STRING #30 @ $DF5A5
+#W16($DF423)
+// わるきﾞはないのてﾞある。  [END]
+// current address: $DF5B6
+
+//POINTER #31 @ $DF425 - STRING #31 @ $DF473
+#W16($DF425)
+//                [END]
+// current address: $DF484
+
+//POINTER #32 @ $DF427 - STRING #32 @ $DF5B6
+#W16($DF427)
+//  というわけてﾞいまここに  [END]
+// current address: $DF5C7
+
+//POINTER #33 @ $DF429 - STRING #33 @ $DF5C7
+#W16($DF429)
+//  あんいなとﾞうふﾞつたち  [END]
+// current address: $DF5D8
+
+//POINTER #34 @ $DF42B - STRING #34 @ $DF5D8
+#W16($DF42B)
+//  による、あつくはけﾞしい  [END]
+// current address: $DF5E9
+
+//POINTER #35 @ $DF42D - STRING #35 @ $DF5E9
+#W16($DF42D)
+//  さっかーかﾞはしﾞまる!  [END]
+// current address: $DF5FA

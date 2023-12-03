@@ -1,0 +1,53 @@
+RAM:
+$0000 = gfx_endr
+$0006 = ctrl_byte_00
+
+REGS:
+X = offset escrita
+Y = offset leitura
+
+80f28d php
+80f28e phb
+80f28f rep #$31
+80f291 pha
+80f292 phx
+80f293 phy
+
+80f294 lda $0e,s 	; carregar endereço dos gráficos
+80f296 adc #$0004	; somar 4
+80f299 sta gfx_endr
+
+80f29b lda $0c,s	; carregar offset de escrita
+80f29d tax		; x = offset escrita
+
+80f29e sep #$20
+80f2a0 lda $10,s
+80f2a2 sta $02
+
+80f2a4 stz $08		; $08 = 0
+
+80f2a6 lda #$ff
+80f2a8 sta $0a		; $0a = $FF
+
+80f2aa lda #$7f	
+80f2ac pha
+80f2ad plb		; banco = $7F (segundo banco da WRAM)
+80f2ae ldy #$0000	; zerar offset dos gráficos
+80f2b1 lda [gfx_endr],y	; carregar primeiro byte de controle
+80f2b3 iny		; aumentar offset de leitura
+80f2b4 sta ctrl_byte_00 ; guardar byte de controle
+80f2b6 asl ctrl_byte_00	; se for maior que $80,
+80f2b8 bcs +		; escrever bytes diretamente
+80f2ba jmp $f385
+
+80f2bd +:lda [$00],y	; carregar próximo byte de dados gráficos
+80f2bf iny		; aumentar offset de leitura
+80f2c0 sta $0000,x	; escrever byte no destino
+80f2c3 inx		; aumentar offset de escrita
+80f2c4 asl ctrl_byte_00	; se byte de controle for maior que $80,
+80f2c6 bcs $f2cb	; escrever bytes diretamente
+80f2c8 jmp $f3dc
+80f2cb +:lda [$00],y	; carregar próximo byte de dados gráficos
+80f2cd iny		; aumentar offset de leitura
+80f2ce sta $0000,x	; escrever byte no detino
+80f2d1 inx		; aumentar offset de escrita

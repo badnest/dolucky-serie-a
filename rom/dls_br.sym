@@ -1,0 +1,18 @@
+; this file was created with wlalink by ville helin <ville.helin@iki.fi>.
+; wla symbolic information for "rom/dls_br.sfc".
+
+[information]
+version 3
+
+[labels]
+00:8000 reset
+11:8000 gfx_fonte
+
+[sections]
+00088000 11:0000 8000 00001c00 F_FONTE
+
+[source files v2]
+0001:0001 08e5ebd7 asm/main.asm 
+
+[rom checksum]
+0f8fb919

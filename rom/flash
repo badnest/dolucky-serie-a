@@ -1,0 +1,4 @@
+#!/bin/sh
+doas mount -t msdosfs /dev/da2s1 /mnt/diesel/sd0 &&
+doas cp rom/dls_br.sfc /mnt/diesel/sd0/CINZA/DOLUCKY\'S\ A-LEAGUE &&
+doas umount /dev/da2s1

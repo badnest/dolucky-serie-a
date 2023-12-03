@@ -1,0 +1,211 @@
+//GAME NAME:		DOLUCKY! FUTEBOL SÉRIE A
+
+// Define required TABLE variables and load the corresponding tables
+#VAR(Table_0, TABLE)
+#ADDTBL("./tbl/8x16_in.tbl", Table_0)
+
+//BLOCK #000 NAME:		Jogadores
+#ACTIVETBL(Table_0) // Activate this block's starting TABLE
+
+#JMP($17C60, $17FFF) // Jump to insertion point
+#HDR($8000) // Difference between ROM and RAM addresses for pointer value calculations
+
+//POINTER #0 @ $12331 - STRING #0 @ $12381
+#W16($12331)
+William [END]
+// current address: $12388
+
+//POINTER #1 @ $12333 - STRING #1 @ $12388
+#W16($12333)
+Dolucky [END]
+// current address: $1238F
+
+//POINTER #2 @ $12335 - STRING #2 @ $1238F
+#W16($12335)
+Mike    [END]
+// current address: $12396
+
+//POINTER #3 @ $12337 - STRING #3 @ $12396
+#W16($12337)
+Torao   [END]
+// current address: $1239D
+
+//POINTER #4 @ $12339 - STRING #4 @ $1239D
+#W16($12339)
+Kotetsu [END]
+// current address: $123A4
+
+//POINTER #5 @ $1233B - STRING #5 @ $123A4
+#W16($1233B)
+Nora    [END]
+// current address: $123AB
+
+//POINTER #6 @ $1233D - STRING #6 @ $123AB
+#W16($1233D)
+Tama    [END]
+// current address: $123B2
+
+//POINTER #7 @ $1233F - STRING #7 @ $123B2
+#W16($1233F)
+Mi      [END]
+// current address: $123B9
+
+//POINTER #8 @ $12341 - STRING #8 @ $123B9
+#W16($12341)
+Harry   [END]
+// current address: $123C0
+
+//POINTER #9 @ $12343 - STRING #9 @ $123C0
+#W16($12343)
+Pochi   [END]
+// current address: $123C7
+
+//POINTER #10 @ $12345 - STRING #10 @ $123C7
+#W16($12345)
+Rush    [END]
+// current address: $123CE
+
+//POINTER #11 @ $12347 - STRING #11 @ $123CE
+#W16($12347)
+Taro    [END]
+// current address: $123D5
+
+//POINTER #12 @ $12349 - STRING #12 @ $123D5
+#W16($12349)
+Jiro    [END]
+// current address: $123DC
+
+//POINTER #13 @ $1234B - STRING #13 @ $123DC
+#W16($1234B)
+Hati   [END]
+// current address: $123E3
+
+//POINTER #14 @ $1234D - STRING #14 @ $123E3
+#W16($1234D)
+Bendy   [END]
+// current address: $123EA
+
+//POINTER #15 @ $1234F - STRING #15 @ $123EA
+#W16($1234F)
+Jolly   [END]
+// current address: $123F1
+
+//POINTER #16 @ $12351 - STRING #16 @ $123F1
+#W16($12351)
+Tony    [END]
+// current address: $123F8
+
+//POINTER #17 @ $12353 - STRING #17 @ $123F8
+#W16($12353)
+David   [END]
+// current address: $123FF
+
+//POINTER #18 @ $12355 - STRING #18 @ $123FF
+#W16($12355)
+Michael [END]
+// current address: $12406
+
+//POINTER #19 @ $12357 - STRING #19 @ $12406
+#W16($12357)
+Roger   [END]
+// current address: $1240D
+
+//POINTER #20 @ $12359 - STRING #20 @ $1240D
+#W16($12359)
+Jorge   [END]
+// current address: $12414
+
+//POINTER #21 @ $1235B - STRING #21 @ $12414
+#W16($1235B)
+James   [END]
+// current address: $1241B
+
+//POINTER #22 @ $1235D - STRING #22 @ $1241B
+#W16($1235D)
+Robert  [END]
+// current address: $12422
+
+//POINTER #23 @ $1235F - STRING #23 @ $12422
+#W16($1235F)
+Gary    [END]
+// current address: $12429
+
+//POINTER #24 @ $12361 - STRING #24 @ $12429
+#W16($12361)
+Kenji   [END]
+// current address: $12430
+
+//POINTER #25 @ $12363 - STRING #25 @ $12430
+#W16($12363)
+Goro    [END]
+// current address: $12437
+
+//POINTER #26 @ $12365 - STRING #26 @ $12437
+#W16($12365)
+Yoshio  [END]
+// current address: $1243E
+
+//POINTER #27 @ $12367 - STRING #27 @ $1243E
+#W16($12367)
+Koiti   [END]
+// current address: $12445
+
+//POINTER #28 @ $12369 - STRING #28 @ $12445
+#W16($12369)
+Juniti  [END]
+// current address: $1244C
+
+//POINTER #29 @ $1236B - STRING #29 @ $1244C
+#W16($1236B)
+Hiroshi [END]
+// current address: $12453
+
+//POINTER #30 @ $1236D - STRING #30 @ $12453
+#W16($1236D)
+Masaki  [END]
+// current address: $1245A
+
+//POINTER #31 @ $1236F - STRING #31 @ $1245A
+#W16($1236F)
+Fujio   [END]
+// current address: $12461
+
+//POINTER #32 @ $12371 - STRING #32 @ $12461
+#W16($12371)
+Turbo   [END]
+// current address: $12468
+
+//POINTER #33 @ $12373 - STRING #33 @ $12468
+#W16($12373)
+Jet     [END]
+// current address: $1246F
+
+//POINTER #34 @ $12375 - STRING #34 @ $1246F
+#W16($12375)
+Rocket  [END]
+// current address: $12476
+
+//POINTER #35 @ $12377 - STRING #35 @ $12476
+#W16($12377)
+Motor   [END]
+// current address: $1247D
+
+//POINTER #36 @ $12379 - STRING #36 @ $1247D
+#W16($12379)
+Thruster[END]
+// current address: $12484
+
+//POINTER #37 @ $1237B - STRING #37 @ $12484
+#W16($1237B)
+Vernier [END]
+// current address: $1248B
+
+//POINTER #38 @ $1237D - STRING #38 @ $1248B
+#W16($1237D)
+Gear    [END]
+// current address: $12492
+
+//POINTER #39 @ $1237F - STRING #39 @ $12492
+#W16($1237F)
+Clutch  [END]
+// current address: $12499
