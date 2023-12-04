@@ -1,7 +1,8 @@
 #!/bin/sh
 
 perl tools/abcde/abcde.pl -cm "abcde::Cartographer" \
-dls.sfc cmd/dump.cmd txt/dump -m &&
+rom/dls.sfc cmd/dump.cmd txt/dump -m &&
 mv txt/dump_000.txt txt/jgd.txt	&&
 mv txt/dump_001.txt txt/intro.txt &&
-dd if=dls.sfc of=gfx/fontes/fonte_00.2bpp skip=557056 bs=1 count=7168
+mv txt/dump_002.txt txt/bio.txt &&
+dd if=rom/dls.sfc of=gfx/fonte_00.2bpp skip=557056 bs=1 count=7168

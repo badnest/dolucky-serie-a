@@ -1,0 +1,186 @@
+//GAME NAME:		DOLUCKY! FUTEBOL SÉRIE A
+
+// Define required TABLE variables and load the corresponding tables
+#VAR(Table_0, TABLE)
+#ADDTBL("/usr/home/diesel/docs/romhacking/dls/tbl/8x16.tbl", Table_0)
+
+//BLOCK #002 NAME:		Bio
+#ACTIVETBL(Table_0) // Activate this block's starting TABLE
+
+#JMP($DFA1C, $DFE16) // Jump to insertion point
+#HDR($D0000) // Difference between ROM and RAM addresses for pointer value calculations
+
+//POINTER #0 @ $DF9F2 - STRING #0 @ $DFA1C
+#W16($DF9F2)
+// レットﾞ・ホット[BREAK]
+//       トﾞラッキースﾞ [END]
+//
+// current address: $DFA37
+
+//POINTER #1 @ $DF9F4 - STRING #1 @ $DFA37
+#W16($DF9F4)
+// ホﾟチ・サﾞ・ファンキー[BREAK]
+//         トﾞックﾞス [END]
+//
+// current address: $DFA56
+
+//POINTER #2 @ $DF9F6 - STRING #2 @ $DFA56
+#W16($DF9F6)
+//テﾞウﾞィットﾞ・ラヒﾞット[BREAK]
+//         ロッカースﾞ [END]
+//
+// current address: $DFA76
+
+//POINTER #3 @ $DF9F8 - STRING #3 @ $DFA76
+#W16($DF9F8)
+//  コﾞロー・ワイルトﾞ[BREAK]
+//        ヘﾞアースﾞ  [END]
+//
+// current address: $DFA94
+
+//POINTER #4 @ $DF9FA - STRING #4 @ $DFA94
+#W16($DF9FA)
+// シﾞェット・モール[BREAK]
+//       テﾞンシﾞャラス [END]
+//
+// current address: $DFAB0
+
+//POINTER #5 @ $DF9FC - STRING #5 @ $DFAB0
+#W16($DF9FC)
+// レフリー・カーチス[BREAK]
+//         IIIせい[END]
+//
+// current address: $DFACA
+
+//POINTER #6 @ $DF9FE - STRING #6 @ $DFACA
+#W16($DF9FE)
+//エトﾞワートﾞ・やまたﾞ[BREAK]
+// (エテﾞィってよんてﾞくれ)[END]
+//
+// current address: $DFAE7
+
+//POINTER #7 @ $DFA00 - STRING #7 @ $DFAE7
+#W16($DFA00)
+//ねこ とくゆうのきひﾞんさ と[BREAK]
+//しなやかな にくたい てﾞ[BREAK]
+//ひしﾞょうにあつかいやすい[BREAK]
+//チームてﾞあるといわれています。[END]
+//
+// current address: $DFB24
+
+//POINTER #8 @ $DFA02 - STRING #8 @ $DFB24
+#W16($DFA02)
+//ハﾟスワークにていひょうかﾞ[BREAK]
+//あるようてﾞすかﾞ なにしろ[BREAK]
+//ねこは きまくﾞれ てﾞすから[BREAK]
+//ねぇ。とﾞうなんてﾞしょう。[END]
+//
+// current address: $DFB61
+
+//POINTER #9 @ $DFA04 - STRING #9 @ $DFB61
+#W16($DFA04)
+//エースのホﾟチのましﾞめさ かﾞ[BREAK]
+//うれしい しょうしﾞきチーム。[BREAK]
+//ねこ より いぬ のすきな[BREAK]
+//あなたに。[END]
+//
+// current address: $DFB96
+
+//POINTER #10 @ $DFA06 - STRING #10 @ $DFB96
+#W16($DFA06)
+//まっすくﾞ てﾞ いちすﾞな[BREAK]
+//フﾟレイかﾞきたいてﾞきます。[BREAK]
+//あと、くつに なにかヒミツかﾞ[BREAK]
+//あるとかないとか・・・。[END]
+//
+// current address: $DFBD2
+
+//POINTER #11 @ $DFA08 - STRING #11 @ $DFBD2
+#W16($DFA08)
+//いつもココロはロックンロールの[BREAK]
+//ウサキﾞてﾞす。ヘンてﾞすね。[BREAK]
+//くうちゅうせん かﾞとくい[BREAK]
+//らしいてﾞす。[END]
+//
+// current address: $DFC08
+
+//POINTER #12 @ $DFA0A - STRING #12 @ $DFC08
+#W16($DFA0A)
+//インハﾟクトのあるキャラクター[BREAK]
+//の すきなひとはとﾞうそﾞ。[BREAK]
+//かれらのロックたﾞましいを[BREAK]
+//わかってあけﾞましょうね。[END]
+//
+// current address: $DFC43
+
+//POINTER #13 @ $DFA0C - STRING #13 @ $DFC43
+#W16($DFA0C)
+//もう、ハﾟワーたﾞけてﾞす。[BREAK]
+//ちからおしと オヤシﾞの[BREAK]
+//すきなひとに おすすめと[BREAK]
+//いったところてﾞしょうか。[END]
+//
+// current address: $DFC7A
+
+//POINTER #14 @ $DFA0E - STRING #14 @ $DFC7A
+#W16($DFA0E)
+//わかりやすいくﾞらいに[BREAK]
+//あしかﾞおそいてﾞすかﾞ、[BREAK]
+//イキオイてﾞカハﾞーして[BREAK]
+//くたﾞさい。[END]
+//
+// current address: $DFCA8
+
+//POINTER #15 @ $DFA10 - STRING #15 @ $DFCA8
+#W16($DFA10)
+//みてのとおりのモクﾞラ[BREAK]
+//なんてﾞすかﾞ、なんと ひを[BREAK]
+//ふいたりします。うーん、[BREAK]
+//これは ヒキョウたﾞよなぁ。[END]
+//
+// current address: $DFCDF
+
+//POINTER #16 @ $DFA12 - STRING #16 @ $DFCDF
+#W16($DFA12)
+//けっこう はんそくな[BREAK]
+//キャラクターてﾞはありますかﾞ[BREAK]
+//なにしろ さいこﾞの てき[BREAK]
+//てﾞすからってことてﾞひとつ。[END]
+//
+// current address: $DFD18
+
+//POINTER #17 @ $DFA14 - STRING #17 @ $DFD18
+#W16($DFA14)
+//ミスター・トッフﾟ・オフﾞ[BREAK]
+//シﾞャッシﾞメンツ。かれの[BREAK]
+//フエは 5ねんもの とﾞくとくの[BREAK]
+//よい おとかﾞ します。[END]
+//
+// current address: $DFD52
+
+//POINTER #18 @ $DFA16 - STRING #18 @ $DFD52
+#W16($DFA16)
+//かれ ひとりしか しんはﾟんかﾞ[BREAK]
+//いないため、オフサイトﾞかﾞない[BREAK]
+//という てﾞんせつかﾞあるほとﾞ[BREAK]
+//かれは フﾟロなのてﾞす(?)。[END]
+//
+// current address: $DFD96
+
+//POINTER #19 @ $DFA18 - STRING #19 @ $DFD96
+#W16($DFA18)
+//Aりーくﾞ に さんせんしようと[BREAK]
+//したかﾞ、まったく なかまかﾞ[BREAK]
+//あつまらすﾞ さみしさのあまり[BREAK]
+//ほﾞうかﾞいをくわたﾞてる。[END]
+//
+// current address: $DFDD6
+
+//POINTER #20 @ $DFA1A - STRING #20 @ $DFDD6
+#W16($DFA1A)
+//マットﾞサイエンティストなのてﾞ[BREAK]
+//さまさﾞまな メカニスﾞムを[BREAK]
+//くしして たﾞとうAりーくﾞを[BREAK]
+//めさﾞす ヘンなオヤシﾞてﾞす。[END]
+//
+// current address: $DFE17
