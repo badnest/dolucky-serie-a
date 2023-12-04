@@ -35,8 +35,8 @@ Y = offset leitura
 80f2ae ldy #$0000	; zerar offset dos gráficos
 80f2b1 lda [gfx_endr],y	; carregar primeiro byte de controle
 80f2b3 iny		; aumentar offset de leitura
-80f2b4 sta ctrl_byte_00 ; guardar byte de controle
-80f2b6 asl ctrl_byte_00	; se for maior que $80,
+80f2b4 sta ctrl_byte_00 ; guardar byte de controle e
+80f2b6 asl ctrl_byte_00	; dobrar, se virar
 80f2b8 bcs +		; escrever bytes diretamente
 80f2ba jmp $f385
 
@@ -44,10 +44,38 @@ Y = offset leitura
 80f2bf iny		; aumentar offset de leitura
 80f2c0 sta $0000,x	; escrever byte no destino
 80f2c3 inx		; aumentar offset de escrita
-80f2c4 asl ctrl_byte_00	; se byte de controle for maior que $80,
-80f2c6 bcs $f2cb	; escrever bytes diretamente
+80f2c4 asl ctrl_byte_00	; dobrar byte de controle
+80f2c6 bcs +		; se virar, escrever bytes diretamente
 80f2c8 jmp $f3dc
+
 80f2cb +:lda [$00],y	; carregar próximo byte de dados gráficos
 80f2cd iny		; aumentar offset de leitura
 80f2ce sta $0000,x	; escrever byte no detino
 80f2d1 inx		; aumentar offset de escrita
+80f2d2 asl ctrl_byte_00	; dobrar byte de controle
+80f2d4 bcs +		; se virar, escrever bytes diretamente
+80f2d6 jmp $f433
+
+80f2d9 +:lda [$00],y	; carregar próximo byte de dados gráficos
+80f2db iny		; aumentar offset de leitura
+80f2dc sta $0000,x	; escrever byte no destino
+80f2df inx		; aumentar offset de escrita
+80f2e0 asl ctrl_byte_00	; dobrar byte de controle
+80f2e2 bcs +		; se virar, escrever bytes diretamente
+80f2e4 jmp $f48a
+
+80f2e7 +:lda [$00],y	; carregar próximo byte de dados gráficos
+80f2e9 iny		; aumentar offset de leitura
+80f2ea sta $0000,x	; escrever byte no destino
+80f2ed inx		; aumentar offset de escrita
+80f2ee asl ctrl_byte_00	; dobrar byte de controle
+80f2f0 bcs +		; se virar, escrever bytes diretamente
+80f2f2 jmp $f4e1
+
+80f2f5 +:lda [$00],y	; carregar próximo byte de dados gráficos
+80f2f7 iny		; aumentar offset de leitura
+80f2f8 sta $0000,x	; escrever byte no destino
+80f2fb inx		; aumentar offset de escrita
+80f2fc asl ctrl_byte_00	; dobrar byte de controle
+80f2fe bcs $f303	; se virar, escrever bytes diretamente
+80f300 jmp $f538
