@@ -16,9 +16,10 @@ ROM bank 1 (32016 bytes (97.71%) used)
     - Used space at $0000-$7d0f (32016 bytes).
   - Sections (0 bytes)
     - No .SECTIONs found.
-ROM bank 2 (31824 bytes (97.12%) used)
-  - Outside .SECTIONs (31824 bytes)
-    - Used space at $0000-$7c4f (31824 bytes).
+ROM bank 2 (31928 bytes (97.44%) used)
+  - Outside .SECTIONs (31928 bytes)
+    - Used space at $0000-$2380 (9089 bytes).
+    - Used space at $2499-$7dcf (22839 bytes).
   - Sections (0 bytes)
     - No .SECTIONs found.
 ROM bank 3 (31488 bytes (96.09%) used)
@@ -91,9 +92,9 @@ ROM bank 16 (32768 bytes (100.00%) used)
     - Used space at $0000-$7fff (32768 bytes).
   - Sections (0 bytes)
     - No .SECTIONs found.
-ROM bank 17 (39936 bytes (121.88%) used)
-  - Outside .SECTIONs (32768 bytes)
-    - Used space at $0000-$7fff (32768 bytes).
+ROM bank 17 (32768 bytes (100.00%) used)
+  - Outside .SECTIONs (25600 bytes)
+    - Used space at $1c00-$7fff (25600 bytes).
   - Sections (7168 bytes)
     - .SECTION "F_FONTE" (7168 bytes).
 ROM bank 18 (32768 bytes (100.00%) used)
@@ -253,5 +254,5 @@ No .RAMSECTIONs were found, no information about RAM.
 -------------------------------------------------
 ---                 SUMMARY                   ---
 -------------------------------------------------
-ROM: 1575875 bytes (100.19%) used.
+ROM: 1568811 bytes (99.74%) used.
 RAM: No .RAMSECTIONs were found, no information about RAM.

@@ -7,7 +7,7 @@
 //BLOCK #000 NAME:		Jogadores
 #ACTIVETBL(Table_0) // Activate this block's starting TABLE
 
-#JMP($17C60, $17FFF) // Jump to insertion point
+#JMP($17C60, $17DCF) // Jump to insertion point
 #HDR($8000) // Difference between ROM and RAM addresses for pointer value calculations
 
 //POINTER #0 @ $12331 - STRING #0 @ $12381

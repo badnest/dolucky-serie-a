@@ -12,7 +12,7 @@ version 3
 00088000 11:0000 8000 00001c00 F_FONTE
 
 [source files v2]
-0001:0001 08e5ebd7 asm/main.asm 
+0001:0001 c7bfd98c asm/main.asm 
 
 [rom checksum]
-0f8fb919
+f689cbe1

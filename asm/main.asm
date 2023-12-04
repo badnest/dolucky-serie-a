@@ -5,10 +5,6 @@
 ;=======================================================================;
 
 
-; CABEÇALHO
-;----------
-
-
 ; MAPEAMENTO DE MEMÓRIA
 ;----------------------
 
@@ -18,8 +14,6 @@
 .DEFINE ADDR $8000
 .DEFINE SIZE $0b
 .DEFINE NMI $0000
-
-; wla internals ----------------------------------------------------------------
 
 .MEMORYMAP
  SLOTSIZE BANKSIZE
@@ -37,12 +31,17 @@ reset:
 
 ; MAPEAMENTO DA ROM
 ;------------------
+
 .BACKGROUND	"rom/dls.sfc"
 .UNBACKGROUND	$7B23	$7FBF
 .UNBACKGROUND	$FD10	$FFFF
-.UNBACKGROUND	$17C50	$17FFF
+.UNBACKGROUND	$12381	$12498	; antigo local nomes jogadores
+.UNBACKGROUND	$17DD0	$17FFF
 .UNBACKGROUND	$1FB00	$1FFFF
+.UNBACKGROUND	$88000	$89BFF	; fonte
 .EMPTYFILL	$00
+
+
 
 ;=======================================================================;
 ;									;
@@ -53,7 +52,7 @@ reset:
 .BANK 17
 
 .ORG	$0000
-.SECTION "F_FONTE"	OVERWRITE
+.SECTION "F_FONTE"	FORCE
 	gfx_fonte:
 		.INCBIN	"gfx/fonte_00_br.2bpp"	FSIZE s_fonte
 .ENDS
