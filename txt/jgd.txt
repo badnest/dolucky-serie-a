@@ -18,7 +18,7 @@
 
 //POINTER #1 @ $12333 - STRING #1 @ $12388
 #W16($12333)
-//トﾞラッキー[END]
+//ドラッキー[END]
 //
 // current address: $1238F
 
@@ -66,7 +66,7 @@
 
 //POINTER #9 @ $12343 - STRING #9 @ $123C0
 #W16($12343)
-//ホﾟチ   [END]
+//ポチ   [END]
 //
 // current address: $123C7
 
@@ -84,7 +84,7 @@
 
 //POINTER #12 @ $12349 - STRING #12 @ $123D5
 #W16($12349)
-//シﾞロ   [END]
+//ジロ   [END]
 //
 // current address: $123DC
 
@@ -96,13 +96,13 @@
 
 //POINTER #14 @ $1234D - STRING #14 @ $123E3
 #W16($1234D)
-//ヘﾞンシﾞィ[END]
+//ベンジィ[END]
 //
 // current address: $123EA
 
 //POINTER #15 @ $1234F - STRING #15 @ $123EA
 #W16($1234F)
-//シﾞョリィ [END]
+//ジョリィ [END]
 //
 // current address: $123F1
 
@@ -114,7 +114,7 @@
 
 //POINTER #17 @ $12353 - STRING #17 @ $123F8
 #W16($12353)
-//テﾞヒﾞット[END]
+//デビット[END]
 //
 // current address: $123FF
 
@@ -126,43 +126,43 @@
 
 //POINTER #19 @ $12357 - STRING #19 @ $12406
 #W16($12357)
-//ロシﾞャー [END]
+//ロジャー [END]
 //
 // current address: $1240D
 
 //POINTER #20 @ $12359 - STRING #20 @ $1240D
 #W16($12359)
-//シﾞョーシﾞ[END]
+//ジョージ[END]
 //
 // current address: $12414
 
 //POINTER #21 @ $1235B - STRING #21 @ $12414
 #W16($1235B)
-//シﾞェイムス[END]
+//ジェイムス[END]
 //
 // current address: $1241B
 
 //POINTER #22 @ $1235D - STRING #22 @ $1241B
 #W16($1235D)
-//ロハﾞート [END]
+//ロバート [END]
 //
 // current address: $12422
 
 //POINTER #23 @ $1235F - STRING #23 @ $12422
 #W16($1235F)
-//ケﾞイリー [END]
+//ゲイリー [END]
 //
 // current address: $12429
 
 //POINTER #24 @ $12361 - STRING #24 @ $12429
 #W16($12361)
-//けんしﾞ  [END]
+//けんじ  [END]
 //
 // current address: $12430
 
 //POINTER #25 @ $12363 - STRING #25 @ $12430
 #W16($12363)
-//こﾞろう  [END]
+//ごろう  [END]
 //
 // current address: $12437
 
@@ -180,7 +180,7 @@
 
 //POINTER #28 @ $12369 - STRING #28 @ $12445
 #W16($12369)
-//しﾞゅんいち[END]
+//じゅんいち[END]
 //
 // current address: $1244C
 
@@ -198,19 +198,19 @@
 
 //POINTER #31 @ $1236F - STRING #31 @ $1245A
 #W16($1236F)
-//ふしﾞお  [END]
+//ふじお  [END]
 //
 // current address: $12461
 
 //POINTER #32 @ $12371 - STRING #32 @ $12461
 #W16($12371)
-//ターホﾞ  [END]
+//ターボ  [END]
 //
 // current address: $12468
 
 //POINTER #33 @ $12373 - STRING #33 @ $12468
 #W16($12373)
-//シﾞェット [END]
+//ジェット [END]
 //
 // current address: $1246F
 
@@ -234,13 +234,13 @@
 
 //POINTER #37 @ $1237B - STRING #37 @ $12484
 #W16($1237B)
-//ハﾞーニア [END]
+//バーニア [END]
 //
 // current address: $1248B
 
 //POINTER #38 @ $1237D - STRING #38 @ $1248B
 #W16($1237D)
-//キﾞア   [END]
+//ギア   [END]
 //
 // current address: $12492
 

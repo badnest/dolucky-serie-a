@@ -6,13 +6,18 @@ version 3
 
 [labels]
 00:8000 reset
+1b:f857 bios_prop
+1b:fe50 hdma_over
+1b:fece hdma_vazio
+1b:fed7 hdma_borda
 11:8000 gfx_fonte
 
 [sections]
 00088000 11:0000 8000 00001c00 F_FONTE
+000dfe50 1b:7e50 fe50 00000095 HDMA_OVER
 
 [source files v2]
-0001:0001 2d921a20 asm/main.asm 
+0001:0001 dfed4fab asm/main.asm 
 
 [rom checksum]
-f689cbe1
+1b0f7645

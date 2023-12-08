@@ -144,11 +144,11 @@ ROM bank 26 (30864 bytes (94.19%) used)
     - Used space at $0000-$788f (30864 bytes).
   - Sections (0 bytes)
     - No .SECTIONs found.
-ROM bank 27 (32336 bytes (98.68%) used)
+ROM bank 27 (32485 bytes (99.14%) used)
   - Outside .SECTIONs (32336 bytes)
     - Used space at $0000-$7e4f (32336 bytes).
-  - Sections (0 bytes)
-    - No .SECTIONs found.
+  - Sections (149 bytes)
+    - .SECTION "HDMA_OVER" (149 bytes).
 ROM bank 28 (32768 bytes (100.00%) used)
   - Outside .SECTIONs (32768 bytes)
     - Used space at $0000-$7fff (32768 bytes).
@@ -256,5 +256,5 @@ No .RAMSECTIONs were found, no information about RAM.
 -------------------------------------------------
 ---                 SUMMARY                   ---
 -------------------------------------------------
-ROM: 1548975 bytes (98.48%) used.
+ROM: 1549124 bytes (98.49%) used.
 RAM: No .RAMSECTIONs were found, no information about RAM.

@@ -60,7 +60,127 @@ reset:
 .UNBACKGROUND	$167FE0	$167FFF
 .EMPTYFILL	$00
 
+;=======================================================================;
+;									;
+;      			*****     BIO TIMES   	*****			;
+;									;
+;=======================================================================;
 
+.BANK 27
+
+.DEFINE retrato_pos	= $0041		; pos retrato dos times
+.DEFINE jnl1_pos_y	= $0010		; pos inicio janela 01
+.DEFINE jnl1_pos_x	= $F868		; fim/começo janela 01 horz
+.DEFINE jnl1_tam	= $0048		; tamanho janela 01
+.DEFINE	jnl_spc		= $0018		; espaço entre janelas
+.DEFINE jnl2_pos_x	= $F808		; fim/começo janela 02 horz
+.DEFINE jnl2_tam	= $004F		; tamanho janela 02
+.DEFINE jnl1_txt_pos	= $088E		; pos texto 01
+.DEFINE jnl2_txt_pos	= $09A2		; pos texto 01
+
+.ORG $7857
+
+bios_prop:
+.DW 	retrato_pos
+
+.ORG $7902
+.DW	jnl1_txt_pos
+
+.ORG $794A
+.DW	jnl2_txt_pos
+
+.ORG $78A2
+jsr	hdma_over
+
+.SECTION "HDMA_OVER"	SEMIFREE
+hdma_over:
+	phx
+	sep	#$20
+	lda.b	#$7f
+	pha
+	plb
+	ldx.w	#jnl1_pos_y*2
+	ldy.w	#$0000
+	rep	#$20
+	lda.w	#$0001
+	jsr	hdma_vazio
+
+	lda.w	#jnl1_pos_x+$0001-$0100
+	jsr	hdma_borda
+
+	ldx.w	#jnl1_tam
+-:	lda.w	#jnl1_pos_x
+	sta	$0cc0,y
+	iny
+	iny
+	lda.w	#$8180
+	sta	$0CC0,y
+	iny
+	iny
+	dex
+	bne	-
+
+	lda.w	#jnl1_pos_x+$0001-$0100
+	jsr	hdma_borda
+
+	ldx.w	#jnl_spc
+	lda.w	#$0001
+	jsr	hdma_vazio
+
+	lda.w	#jnl2_pos_x+$0001-$0100
+	jsr	hdma_borda
+
+	ldx.w	#jnl2_tam
+-:	lda.w	#jnl2_pos_x
+	sta	$0cc0,y
+	iny
+	iny
+	lda.w	#$8180
+	sta	$0CC0,y
+	iny
+	iny
+	dex
+	bne	-
+
+	lda.w	#jnl2_pos_x+$0001-$0100
+	jsr	hdma_borda
+
+-:	lda.w	#$0001
+	sta.w	$0CC0,y
+	iny
+	iny
+	tya
+	cmp	#$02DF
+	bcc	-
+
+	sep	#$20
+	lda.b	#$7e
+	pha
+	plb
+	rep	#$20
+	lda	#$0003
+	clc
+	plx
+	rts
+
+hdma_vazio:
+-:	sta	$0cc0,y
+	iny
+	iny
+	dex
+	bne	-
+	rts
+
+hdma_borda:
+	sta	$0CC0,y
+	iny
+	iny
+	lda.w	#$8180
+	sta	$0CC0,y
+	iny
+	iny
+	rts
+.ENDS
 
 ;=======================================================================;
 ;									;

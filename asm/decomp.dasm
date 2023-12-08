@@ -40,42 +40,71 @@ Y = offset leitura
 80f2b8 bcs +		; escrever bytes diretamente
 80f2ba jmp $f385
 
-80f2bd +:lda [$00],y	; carregar próximo byte de dados gráficos
-80f2bf iny		; aumentar offset de leitura
-80f2c0 sta $0000,x	; escrever byte no destino
-80f2c3 inx		; aumentar offset de escrita
-80f2c4 asl ctrl_byte_00	; dobrar byte de controle
-80f2c6 bcs +		; se virar, escrever bytes diretamente
+80f2bd +:lda [gfx_endr],y	; carregar próximo byte de dados gráficos
+80f2bf iny			; aumentar offset de leitura
+80f2c0 sta $0000,x		; escrever byte no destino
+80f2c3 inx			; aumentar offset de escrita
+80f2c4 asl ctrl_byte_00		; dobrar byte de controle
+80f2c6 bcs +			; se virar, escrever bytes diretamente
 80f2c8 jmp $f3dc
 
-80f2cb +:lda [$00],y	; carregar próximo byte de dados gráficos
-80f2cd iny		; aumentar offset de leitura
-80f2ce sta $0000,x	; escrever byte no detino
-80f2d1 inx		; aumentar offset de escrita
-80f2d2 asl ctrl_byte_00	; dobrar byte de controle
-80f2d4 bcs +		; se virar, escrever bytes diretamente
+80f2cb +:lda [gfx_endr],y	; carregar próximo byte de dados gráficos
+80f2cd iny			; aumentar offset de leitura
+80f2ce sta $0000,x		; escrever byte no detino
+80f2d1 inx			; aumentar offset de escrita
+80f2d2 asl ctrl_byte_00		; dobrar byte de controle
+80f2d4 bcs +			; se virar, escrever bytes diretamente
 80f2d6 jmp $f433
 
-80f2d9 +:lda [$00],y	; carregar próximo byte de dados gráficos
-80f2db iny		; aumentar offset de leitura
-80f2dc sta $0000,x	; escrever byte no destino
-80f2df inx		; aumentar offset de escrita
-80f2e0 asl ctrl_byte_00	; dobrar byte de controle
-80f2e2 bcs +		; se virar, escrever bytes diretamente
+80f2d9 +:lda [gfx_endr],y	; carregar próximo byte de dados gráficos
+80f2db iny			; aumentar offset de leitura
+80f2dc sta $0000,x		; escrever byte no destino
+80f2df inx			; aumentar offset de escrita
+80f2e0 asl ctrl_byte_00		; dobrar byte de controle
+80f2e2 bcs +			; se virar, escrever bytes diretamente
 80f2e4 jmp $f48a
 
-80f2e7 +:lda [$00],y	; carregar próximo byte de dados gráficos
-80f2e9 iny		; aumentar offset de leitura
-80f2ea sta $0000,x	; escrever byte no destino
-80f2ed inx		; aumentar offset de escrita
-80f2ee asl ctrl_byte_00	; dobrar byte de controle
-80f2f0 bcs +		; se virar, escrever bytes diretamente
+80f2e7 +:lda [gfx_endr],y	; carregar próximo byte de dados gráficos
+80f2e9 iny			; aumentar offset de leitura
+80f2ea sta $0000,x		; escrever byte no destino
+80f2ed inx			; aumentar offset de escrita
+80f2ee asl ctrl_byte_00		; dobrar byte de controle
+80f2f0 bcs +			; se virar, escrever bytes diretamente
 80f2f2 jmp $f4e1
 
-80f2f5 +:lda [$00],y	; carregar próximo byte de dados gráficos
-80f2f7 iny		; aumentar offset de leitura
-80f2f8 sta $0000,x	; escrever byte no destino
-80f2fb inx		; aumentar offset de escrita
-80f2fc asl ctrl_byte_00	; dobrar byte de controle
-80f2fe bcs $f303	; se virar, escrever bytes diretamente
+80f2f5 +:lda [gfx_endr],y	; carregar próximo byte de dados gráficos
+80f2f7 iny			; aumentar offset de leitura
+80f2f8 sta $0000,x		; escrever byte no destino
+80f2fb inx			; aumentar offset de escrita
+80f2fc asl ctrl_byte_00		; dobrar byte de controle
+80f2fe bcs +			; se virar, escrever bytes diretamente
 80f300 jmp $f538
+
+80f303 +:lda [gfx_endr],y	; carregar próximo byte de dados gráficos
+80f305 iny          		; aumentar offset de leitura
+80f306 sta $0000,x  		; escrever byte no destino
+80f309 inx          		; aumentar offset de escrita
+80f30a asl ctrl_byte_00		; dobrar byte de controle
+80f30c bcs +        		; se virar, escrever bytes diretamente
+80f30e jmp $f598
+
+80f311 +:lda [gfx_endr],y	; carregar próximo byte de dados gráficos
+80f313 iny          		; aumentar offset de leitura
+80f314 sta $0000,x  		; escrever byte no destino
+80f317 inx          		; aumentar offset de escrita
+80f318 asl ctrl_byte_00 	; dobrar byte de controle
+80f31a bcs +    		; se virar, escrever bytes diretamente
+80f31c jmp $f329
+
+80f31f +:lda [gfx_endr],y	; carregar próximo byte de dados gráficos
+80f321 iny              	; aumentar offset de leitura
+80f322 sta $0000,x      	; escrever byte no destino
+80f325 inx              	; aumentar offset de escrita
+80f326 jmp $f2b1        	; voltar sempre pro começo quando o byte de controle é lido
+ 
+80f329 lda [gfx_endr],y		; carregar byte de controle
+80f32b iny			; aumentar offset de escrita
+80f32c sta $06			; guardar byte de controle
+80f32e asl $06			; dobrar byte
+80f330 bcc $f335		; se virar
+80f332 jmp $f613
